@@ -1,0 +1,153 @@
+::selection {
+  background-color: #ad2079;
+}
+
+::-moz-selection {
+  background-color: #ad2079;
+}
+
+body {
+  padding-left: 8vw;
+  padding-right: 8vw;
+  font-family: 'Inconsolata', monospace;
+  background-color:#EAE8EB;
+}
+
+nav {
+  overflow: auto;
+  padding: 1vw 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: solid thin;
+  border: 0;
+}  
+  
+h1 {
+  display: inline;
+}
+
+ul {
+  list-style: none;
+  float: right;
+}
+
+a { 
+  text-decoration: none;
+  color: black;
+  transition: color 1s;
+}
+  
+a:hover {
+  color: grey;
+  font-weight: bold;
+  transition: color .5s;
+}
+
+.about {
+  display: block;
+}
+  
+main {
+  display: block;
+  overflow: hidden;
+  column-count: 3;
+  column-gap: 4vw;
+  padding-bottom: 2vw;
+  padding-top: 4vw;
+  min-width: 100%;
+  border-top: solid thin grey;
+}
+
+p {
+  margin-top: 0;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.article-title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(173, 32, 121, 0.72);
+  color: rgb(0, 0, 0);
+  visibility: hidden;
+  opacity: 0;
+  margin-bottom: 0;
+  padding: 5vw;
+  font-size: 1.5vw; 
+}
+
+.wrapper:hover .article-title {
+  visibility: visible;
+  opacity: 1;
+}
+
+  
+.article-page {
+  display: block;
+  overflow: hidden;
+  column-count: 2;
+  column-gap: 4vw;
+  padding-bottom: 5%;
+  min-width: 100%;
+}
+  
+article, figure {
+  display: inline;
+  min-width: 27em;
+  padding-bottom: 1em;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+  
+img, a img {
+  display: block;
+  width: 100%;
+  margin: 3vw auto 3vw auto;
+}
+  
+a img {
+  margin: 0 auto 4vw auto;
+  transition: opacity 0.5s;
+}
+  
+a img:hover {
+  opacity: .5;
+}
+  
+footer {
+  border-top: solid thin;
+  border-color: grey;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  font-size: small;
+}
+  
+@media only screen and (max-width: 800px) {
+  
+  main {
+  column-count: 2;
+  }
+  
+  body {
+  padding: 4em;
+  }
+}
+  
+  @media only screen and (max-width: 600px) {
+  
+  main, .article-page {
+  column-count: 1;
+  }
+  
+  body {
+  padding: 2em;
+  }
+}
